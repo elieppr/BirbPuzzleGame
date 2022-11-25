@@ -15,7 +15,7 @@ public class PathVersion2 : MonoBehaviour
     void Start()
     {
         canTravel = script.canTravel;
-        Debug.Log("as");
+        
         
     }
     // Update is called once per frame
@@ -47,12 +47,9 @@ public class PathVersion2 : MonoBehaviour
             Vector2 target = new Vector2(waypoints[waypointIndex].x, waypoints[waypointIndex].y);
             transform.position = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
 
-            Debug.Log(transform.position);
-            Debug.Log(waypoints[waypointIndex]);
             if (transform.position.x == waypoints[waypointIndex].x && transform.position.y == waypoints[waypointIndex].y)
             {
                 waypointIndex += 1;
-                Debug.Log(waypointIndex);
             }
         }
     }
