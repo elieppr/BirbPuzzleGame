@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RESETbutton : MonoBehaviour
+public class RESETBUTTONSCRIPT : MonoBehaviour
 {
-    public void RESETButton()
+    public void ResetScene()
     {
+        Debug.Log("sdfasdf");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
