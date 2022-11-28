@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CheckComplete : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class CheckComplete : MonoBehaviour
     public string tag3;
     public string tag4;
     public string tag5;
-    public int numOfDone; 
+    public int numOfDone;
+    public string SceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +37,8 @@ public class CheckComplete : MonoBehaviour
         
         if (numOfDone == 5)
         {
-            //whatever happens when done
-            Debug.Log("DONE");
+            SceneManager.LoadScene(SceneName);
+            Debug.Log("sdafs");
         }
     }
 
