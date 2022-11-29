@@ -7,7 +7,7 @@ public class DrawManager : MonoBehaviour
     public LineRenderer _renderer;
     public bool canTravel = false;
     private Camera cam;
-    
+
     public const float RESOLUTION = 0.1f;
     public GameObject sprite;
     public GameObject lineObject;
@@ -15,33 +15,44 @@ public class DrawManager : MonoBehaviour
     public bool isMouseUp;
     public bool isMouseDown;
     public IfMouseOver script;
-    
+
     // Start is called before the first frame update
     void Start()
     {
         isMouseOver = script.ifMouseOver;
         isMouseUp = script.isMouseUp;
         isMouseDown = script.isMouseDown;
-        
+
         cam = Camera.main;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         isMouseOver = script.ifMouseOver;
         isMouseUp = script.isMouseUp;
         isMouseDown = script.isMouseDown;
-        
+
         if (isMouseUp)
         {
             SetParent(sprite);
-            canTravel = true;
-            isMouseOver = false;
-            isMouseDown = false;
+            if (_renderer.positionCount > 2) 
+            {
+                canTravel = true;
+            } else
+            {
+                Debug.Log("asdfasdfasdf");
+                this.GetComponent<DrawManager>().enabled = false; //toggle this script to re-invoke it
+                this.GetComponent<DrawManager>().enabled = true;
+
+            
+
+            isMouseOver = true;
+            isMouseDown = true;
+            }
         }
-        
+
         if (isMouseOver || isMouseDown)
         {
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -49,9 +60,9 @@ public class DrawManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0)) lineObject = Instantiate(lineObject, mousePos, Quaternion.identity);
 
             if (Input.GetMouseButton(0)) SetPosition(mousePos);
-            
+
         }
-        
+
     }
 
 

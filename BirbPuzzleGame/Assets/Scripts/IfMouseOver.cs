@@ -41,21 +41,22 @@ public class IfMouseOver : MonoBehaviour
     }
     void OnMouseOver()
     {
+        Debug.Log("over");
         ifMouseOver = true;
     }
     void OnMouseExit()
     {
         ifMouseOver = false;
     }
-    void OnGUI()
-    {
-        Event m_Event = Event.current;
+    //void OnGUI()
+    //{
+    //    Event m_Event = Event.current;
 
-        if (m_Event.type == EventType.MouseUp)
-        {
-            ifMouseOver = false;
-        }
-    }
+    //    if (m_Event.type == EventType.MouseUp)
+    //    {
+    //        ifMouseOver = false;
+    //    }
+    //}
 }
 
 
