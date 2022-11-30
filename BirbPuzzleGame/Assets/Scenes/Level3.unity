@@ -1501,6 +1501,7 @@ MonoBehaviour:
   isMouseUp: 0
   isMouseDown: 0
   script: {fileID: 2087210104}
+  canTravelBeTrue: 0
 --- !u!4 &307750664
 Transform:
   m_ObjectHideFlags: 0
@@ -3910,6 +3911,7 @@ MonoBehaviour:
   isMouseUp: 0
   isMouseDown: 0
   script: {fileID: 1126268547}
+  canTravelBeTrue: 0
 --- !u!4 &1557168662
 Transform:
   m_ObjectHideFlags: 0

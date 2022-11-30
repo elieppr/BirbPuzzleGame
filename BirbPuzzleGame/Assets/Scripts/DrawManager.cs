@@ -15,6 +15,7 @@ public class DrawManager : MonoBehaviour
     public bool isMouseUp;
     public bool isMouseDown;
     public IfMouseOver script;
+    public bool canTravelBeTrue;
 
     // Start is called before the first frame update
     void Start()
@@ -34,12 +35,17 @@ public class DrawManager : MonoBehaviour
         isMouseUp = script.isMouseUp;
         isMouseDown = script.isMouseDown;
 
+        if (!isMouseOver && isMouseDown) { canTravelBeTrue = true; }
         if (isMouseUp)
         {
             SetParent(sprite);
             if (_renderer.positionCount > 2) 
             {
-                canTravel = true;
+                if (canTravelBeTrue)
+                {
+                    canTravel = true;
+                }
+                
             } else
             {
                 Debug.Log("asdfasdfasdf");
@@ -53,7 +59,7 @@ public class DrawManager : MonoBehaviour
             }
         }
 
-        if (isMouseOver || isMouseDown)
+        if ((isMouseOver || isMouseDown) && !canTravel && !isMouseUp)
         {
             Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 

@@ -17,6 +17,7 @@ public class IfMouseOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (ifMouseOver)
         {
             if (Input.GetMouseButtonDown(0))
@@ -27,17 +28,14 @@ public class IfMouseOver : MonoBehaviour
         }
         if (isMouseDown)
         {
+            isMouseUp = false;
             if (Input.GetMouseButtonUp(0))
             {
                 isMouseUp = true;
                 isMouseDown = false;
             }
         }
-        if (isMouseUp)
-        {
-            isMouseDown = false;
-            ifMouseOver = false;
-        }
+        
     }
     void OnMouseOver()
     {
