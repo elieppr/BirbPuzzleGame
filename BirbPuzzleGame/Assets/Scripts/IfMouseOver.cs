@@ -39,7 +39,7 @@ public class IfMouseOver : MonoBehaviour
     }
     void OnMouseOver()
     {
-        Debug.Log("over");
+        //Debug.Log("over");
         ifMouseOver = true;
     }
     void OnMouseExit()
