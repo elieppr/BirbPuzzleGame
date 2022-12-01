@@ -160,6 +160,7 @@ MonoBehaviour:
   isMouseUp: 0
   isMouseDown: 0
   script: {fileID: 1748141415}
+  canTravelBeTrue: 0
 --- !u!4 &67855682
 Transform:
   m_ObjectHideFlags: 0
@@ -226,7 +227,7 @@ MonoBehaviour:
   tag4: Straw
   tag5: Straw
   numOfDone: 0
-  SceneName: Home
+  SceneName: Level3
 --- !u!1 &202651734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4842,6 +4843,7 @@ MonoBehaviour:
   isMouseUp: 0
   isMouseDown: 0
   script: {fileID: 873579896}
+  canTravelBeTrue: 0
 --- !u!4 &1997833945
 Transform:
   m_ObjectHideFlags: 0
