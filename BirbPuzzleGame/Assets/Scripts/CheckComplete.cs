@@ -24,17 +24,18 @@ public class CheckComplete : MonoBehaviour
     {
         
         numOfDone = 0;
-        array = GameObject.FindGameObjectsWithTag(tag1);
-        if (array.Length == 0) numOfDone += 1;
+        //array = GameObject.FindGameObjectsWithTag(tag1);
+        if ((GameObject.FindGameObjectsWithTag(tag1)).Length == 0) numOfDone += 1;
         array = GameObject.FindGameObjectsWithTag(tag2);
-        if (array.Length == 0) numOfDone += 1;
+        if ((GameObject.FindGameObjectsWithTag(tag2)).Length == 0) numOfDone += 1;
         array = GameObject.FindGameObjectsWithTag(tag3);
-        if (array.Length == 0) numOfDone += 1;
+        if ((GameObject.FindGameObjectsWithTag(tag3)).Length == 0) numOfDone += 1;
         array = GameObject.FindGameObjectsWithTag(tag4);
-        if (array.Length == 0) numOfDone += 1;
+        if ((GameObject.FindGameObjectsWithTag(tag4)).Length == 0) numOfDone += 1;
         array = GameObject.FindGameObjectsWithTag(tag5);
-        if (array.Length == 0) numOfDone += 1;
-        
+        if ((GameObject.FindGameObjectsWithTag(tag5)).Length == 0) numOfDone += 1;
+
+        if (numOfDone == 4) Debug.Log("sad");
         if (numOfDone == 5)
         {
             SceneManager.LoadScene(SceneName);
