@@ -2201,7 +2201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   array: []
   tag1: Straw
-  tag2: Straw
+  tag2: blue
   tag3: Straw
   tag4: Straw
   tag5: Straw

@@ -639,7 +639,7 @@ MonoBehaviour:
   array: []
   tag1: Straw
   tag2: Sprout
-  tag3: Sprout
+  tag3: blue
   tag4: Sprout
   tag5: Sprout
   numOfDone: 0
